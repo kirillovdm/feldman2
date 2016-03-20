@@ -1,0 +1,125 @@
+/* Barebones Compass layout styles
+ *
+ * Header styles
+ */
+$layout-header-fixed: false !default;
+
+.layout-header {
+    @if ($layout-header-fixed != false and $layout-header-height > 0) {
+        height: $layout-header-height;
+        position: static;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+    	z-index: 300;
+        margin-bottom: 20px;
+        transition:background-color .15s linear;
+    } @else if ($layout-header-height > 0) {
+        height: $layout-header-height;
+    }
+}
+
+.scrolled{
+    position: fixed;
+    // width: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+}
+.top-header{
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    .logo-block{
+        text-align: center;
+        display: block;
+        img{
+            display: inline-block;
+        }
+    }
+    .lang-block{
+        position: absolute;
+        top:20px;
+        right: 50px;
+        ul{
+            li{
+                display: inline-block;
+                width: 30px;
+                a{
+                    color:$gold;
+                    letter-spacing: 0.5px;
+                    font-size: 13px;
+                    &.active{
+                        color: rgba(0, 0, 0, 0.4);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bottom-header{
+    z-index: 300;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    ul{
+        text-align: center;
+        margin: 4px 0;
+        li{
+            display: inline-block;
+            width: 13%;
+            cursor: pointer;
+            &:nth-of-type(3){
+                width: 16%;
+            }
+            a{  
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-transform: uppercase;
+                font-family: Circe;
+                font-size: 13px;
+                font-weight: 400;
+                letter-spacing: 1.5px;
+                color:#000;
+                margin: 20px 0;
+                &:after{
+                    display: block;
+                    position: absolute;
+                    content: "";
+                    bottom: -5px;
+                    right: 50%;
+                    width: 0;
+                    height: 1px;
+                    background-color: #000;
+                    transition: width .15s linear;
+                }
+                &:before{
+                    display: block;
+                    position: absolute;
+                    content: "";
+                    bottom: -5px;
+                    left: 50%;
+                    width: 0;
+                    height: 1px;
+                    background-color: #000;
+                    transition: width .15s linear;
+                }
+
+                &:hover{
+                    &:before{
+                        width: 50%;
+                    }
+                    &:after{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-icon{
+    
+}

@@ -1,0 +1,57 @@
+/* Barebones Compass header styles
+ *
+ * Header element styles
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    line-height: 1.33;
+
+    margin: $base-margin 0;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: $base-margin * 1.75;
+}
+
+h1 {
+    font-size: rem(54px);
+    line-height: 52px;
+    letter-spacing: 0.87px;
+    font-weight: 400;
+    font-family: 'Heuristica';
+}
+
+h2 {
+    font-size: rem(44px);
+    line-height: 46px;
+    font-weight: 400;
+    font-family: 'Heuristica';
+}
+
+h3 {
+    font-size: rem(24px);
+    font-family: 'Heuristica';
+}
+
+h4 {
+    font-size: rem(20px);
+    line-height: 28px;
+    font-weight: bold;
+    font-family: 'Heuristica';
+}
+
+h5 {
+    font-size: rem(16px);
+}
+
+h6 {
+    font-size: rem(14px);
+}

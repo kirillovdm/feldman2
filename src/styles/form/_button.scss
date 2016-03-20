@@ -1,0 +1,151 @@
+/* Barebones Compass form styles
+ *
+ * Form button styles
+ */
+
+.btn {
+    letter-spacing: 1px;
+    text-align: center;
+
+    background-image: none;
+
+    margin: 0;
+    outline: 0;
+    border: 0;
+    padding: 5px;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    user-select: none;
+
+}
+
+.btn-primary {
+    @include button-basic(
+        $bg:        #fff, $color:        #fff,
+        $bg-hover:  #3d97f2, $color-hover:  #fff,
+        $bg-active: #246bb3, $color-active: #fff
+    );
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+
+    & + & {
+        margin-top: $base-margin / 2;
+    }
+}
+
+.btn-transparent {
+    position: relative;
+    border: 1px solid $goldlight;
+    background: transparent;
+    outline: 0;
+    text-decoration: none;
+    color: $goldlight;
+    max-width: 400px;
+    width: 100%;
+    padding: 15px;
+    letter-spacing: 0.93px;
+    font-size: 13px;
+    cursor: pointer;
+    transition:all .15s linear;
+    text-transform: uppercase;
+    overflow: hidden;
+    &:before{
+        display: block;
+        position: absolute;
+        content: "";
+        bottom:0;
+        left: -0;
+        height: 0;
+        width: 100%;
+        background-color: $goldlight;
+        z-index: -1;
+        transition:height .15s linear;
+        // transform: skew(10deg);
+    }
+    &:hover{
+        color:#fff;
+        background-color: transparent;
+        &:before{
+            height: 100%;
+        }
+    }
+}
+
+.btn-disabled {
+    background: #ccc;
+    outline: 0;
+    text-decoration: none;
+
+    &:hover,
+    &:active{
+        background: #ccc;
+    }
+}
+
+.btn-white{
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(255,255,255,0.7);
+    color:#000;
+    margin: 30px auto;
+    cursor: pointer;
+    padding: 15px 0;
+    transition: all .3s linear;
+        .t{
+            display: block;
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $goldlight;
+            transition:all .2s .5s linear;
+        }
+        .r{
+            display: block;
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 2px;
+            height: 0;
+            background-color: $goldlight;
+            transition:all .1s .3s linear;
+        }
+        .b{
+            display: block;
+            position: absolute;
+            bottom:0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background-color: $goldlight;
+            transition:all .2s .2s linear;
+        }
+        .l{
+            display: block;
+            position: absolute;
+            bottom:0;
+            left: 0;
+            width: 2px;
+            height: 0;
+            background-color: $goldlight;
+            transition:all .1s linear;
+        }
+    &:hover{
+        color:#000;
+        background-color: rgba(255,255,255,1);
+        .t{width: 100%;transition:all .2s linear;}
+        .r{height: 100%;transition:all .1s .2s linear;}
+        .b{width: 100%;transition:all .2s .3s linear;}
+        .l{height: 100%;transition:all .1s .5s linear;}
+    }
+}
