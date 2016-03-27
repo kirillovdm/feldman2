@@ -94,76 +94,6 @@
                   animation-iteration-count: infinite;
                 }
         </style>
-
-        <!-- Example styles, shoud be deleted -->
-        <style>
-            .grid-highlight.row {
-                margin-bottom: 20px;
-            }
-
-            .grid-highlight.row > div > div {
-                font-size: 14px;
-                background: #ccc;
-                padding: 10px;
-                display: block;
-            }
-
-            .form-group.has-success {
-                color: green;
-            }
-
-            .form-group.has-error {
-                color: red;
-            }
-
-            .form-group.validating {
-                color: orange;
-            }
-
-            button[disabled],
-            html input[disabled] {
-                color: gray;
-            }
-
-            .form-control.readonly {
-                background-color: gray;
-            }
-
-            .help-block {
-                margin: 0;
-            }
-
-            .error-text {
-                padding-top: 20px;
-                display: block;
-            }
-
-            .collapse {
-                display: none;
-                visibility: hidden;
-            }
-
-            .collapse.in {
-                display: block;
-                visibility: visible;
-            }
-
-            .collapsing {
-                position: relative;
-                height: 0;
-                overflow: hidden;
-                -webkit-transition-timing-function: ease;
-                     -o-transition-timing-function: ease;
-                        transition-timing-function: ease;
-                -webkit-transition-duration: .35s;
-                     -o-transition-duration: .35s;
-                        transition-duration: .35s;
-                -webkit-transition-property: height, visibility;
-                     -o-transition-property: height, visibility;
-                        transition-property: height, visibility;
-            }
-        </style>
-
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -203,64 +133,45 @@
 
 
         <div class="layout-content">
+            <div class="container">
+                <a href="projects.html" class="back-to-list">Вернутся к списку</a>
 
-            <div class="layout-container">
 
-                <form id="my-form" data-toggle="popel-validator">
+                
+                <div class="small-content-block">
 
-                    <div class="form-group">
-                        <label for="firstname">First name:</label>
-                        <input id="firstname" name="fname" type="text" class="form-control"
-                            data-rules="not-empty min-length max-length"
-                            data-min-length="3"
-                            data-max-length="255">
+                <h2>Медиа-проект «Арт время»</h2>
+                <div class="gold-title-sm">СОВМЕСТНО С МЕДИА-КОМПАНИЕЙ «ВРЕМЯ»</div>
+
+                <div class="fotorama" data-allowfullscreen="true" data-nav="thumbs">
+                    <img src="images/project_page_001.jpg">
+                    <img src="images/project_page_002.jpg">
+                    <img src="images/project_page_003.jpg">
+                </div>
+
+
+                    <p>Проект «Время-арт» реализуется в партнерстве с ежедневной газетой «Время» – одним из самых авторитетных и тиражных общественно-политических изданий Харьковского региона. Он призван содействовать открытости частных коллекций, интеграции их в социокультурное пространство Украины, реализации культурно-просветительской миссии коллекционирования и повышению его роли в духовной жизни общества.</p>
+                    <p>Культурно-просветительская деятельность Feldman Family Museum направлена на реализацию образовательно-воспитательной функции частного собрания, на повышение его открытости и доступности для общества. Каждая входящая в него коллекция рассматривается как источник новых знаний, представлений и идей, способных обогатить духовную жизнь нашего общества. При этом просветительская работа не ограничивается только проведением выставок, опубликованием результатов научных исследований и созданием виртуального музея, а круг стоящих перед ней задач выходит за рамки популяризации самих коллекций.</p>
+                    <p>Одна из главных задач проекта «Время-арт» состоит в том, чтобы содействовать развитию межкультурного диалога в нашей стране, повышению информированности украинского общества о достижениях искусства других народов мира, способствовать расширению, обогащению или изменению привычных представлений о различных видах искусства, художественных направлениях, стилях и традициях, включая и те из них, которые представлены в коллекциях Александра Фельдмана.</p>
+                    <p>«Время-арт» – это доступное для широкой читательской аудитории ежемесячное информационное приложение к газете «Время», в котором публикуются статьи, обзоры, репортажи, интервью и прочие полезные и актуальные материалы по тематике культуры и искусства. Все тексты сопровождаются цветными фотоиллюстрациями. Основными источниками публикуемой в приложении информации являются Feldman Family Museum, газета «Время» и журнал «Антиквар» – единственное на украинском рынке профессиональное издание об антиквариате и коллекционировании.</p>
+                    <p>Наряду с материалами, посвященными коллекциям Александра Фельдмана, представленным в них видам искусства, отдельным уникальным предметам, а также мастерам, создавшим эти шедевры, «Время-арт» знакомит читательскую аудиторию с историей коллекционирования и меценатства в Украине и за рубежом, с новостями и тенденциями отечественного и мирового арт-рынка, коллекционерского и музейного сообщества, информирует о состоявшихся и предстоящих наиболее значимых событиях культурно-художественной жизни Харькова, Украины и зарубежных стран.</p>
+                    <p>В настоящее время «Время-арт» выходит в формате двухстраничного информационного иллюстрированного приложения-вкладыша. В перспективе планируется превратить его в полноценное многостраничное приложение к газете «Время» с одновременным увеличением в нем доли актуальных аналитических материалов. Возможно, изменится и периодичность выхода приложения: оно будет издаваться в двухнедельном режиме.</p>
+                    <div class="tags">
+                        <div class="tag-item">
+                            <img src="images/tag_001.jpg" height="87" width="150" alt="tag_001">
+                        </div>
+                        <div class="tag-item">
+                            <img src="images/tag_002.jpg" height="26" width="100" alt="tag_002">
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="lastname">Last name:</label>
-                        <input id="lastname" name="lname" type="text" class="form-control"
-                            data-rules="not-empty min-length max-length"
-                            data-min-length="3"
-                            data-max-length="255">
+                    <div class="share-block">
+                        <span>Поделиться:</span>
+                        <a class="social-link" href=""></a>
+                        <a class="social-link" href=""></a>
+                        <a class="social-link" href=""></a>
+                        <a class="social-link" href=""></a>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input id="email" name="email" type="email" class="form-control"
-                            data-rules="not-empty min-length max-length email email-unique"
-                            data-min-length="3"
-                            data-max-length="255">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input id="password" name="pass" type="password" class="form-control"
-                            data-rules="not-empty min-length password"
-                            data-min-length="8">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password-confirm">Confirm password:</label>
-                        <input id="password-confirm" name="pass2" type="password" class="form-control"
-                            data-rules="not-empty same-as"
-                            data-same-as="pass">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone:</label>
-                        <input id="phone" name="phone" type="tel" class="form-control"
-                            data-rules="min-length max-length"
-                            data-min-length="7"
-                            data-max-length="15">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary disabled" disabled>Submit</button>
-
-                </form>
-
-            </div>
-        </div>
-
+                </div>
         <div class="layout-footer">
 	<div class="footer-menu">
 		<ul>
@@ -292,6 +203,8 @@
 	</div>
 </div>
 
+            </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
@@ -322,53 +235,5 @@
         </script> -->
 
 
-        <script>(function ($) {
-
-            // Redefine some default values
-            $.fn.popelValidator.defaults.messageTemplate     = '<p class="help-block collapse"><span class="message-text"></span></p>';
-            $.fn.popelValidator.defaults.messageTextSelector = '.message-text';
-
-            // Custom async rule example
-            $.fn.popelValidator.addRule('email-unique', function (value) {
-                var promise = $.Deferred();
-
-                window.setTimeout(function () {
-                    var rand = Math.round(Math.random());
-
-                    promise[rand === 1 ? 'resolve' : 'reject']();
-                }, 1000);
-
-                return promise;
-            });
-
-            // Custom error messages example
-            $.fn.popelValidator.setRuleMessage({
-                email: "Введите корректный e-mail",
-                'email-unique': "E-mail :value уже занят"
-            });
-
-            // Use collapse to show field errors
-            $(document).on('controlvalidated.popel.validator', '.form-control', function (event) {
-                var state  = event.state;
-
-                if (state === $.fn.popelValidator.Constructor.STATE_INVALID) {
-                    $(this).closest('.form-group').find('.help-block').collapse('show');
-                }
-            });
-
-            // Remove field errors after collapse hide animation finishes
-            $(document).on('resetcontrolmessage.popel.validator', '.form-control', function (event) {
-                event.preventDefault();
-
-                var $message = $(event.relatedTarget);
-
-                $message.collapse('hide').one('hidden.bs.collapse', function () {
-                    $message.remove();
-                });
-            });
-
-        })(window.jQuery);</script>
-
     </body>
 </html>
-
