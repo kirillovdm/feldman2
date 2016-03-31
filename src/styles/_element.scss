@@ -86,14 +86,17 @@ body{
     a {
         text-decoration: none;
         color:$gold;
-        &:hover{
-            color:$gold +15%;
-        }
-        &:active{
-            color:$gold -15%;
+        &:focus{
+            color:$gold;
         }
         &:visited{
             color:$gold;
+        }
+        &:hover{
+            color:#000;
+        }
+        &:active{
+            color:#000;
         }
     }
 }
@@ -121,38 +124,30 @@ body{
 }
 
 .separator10{
-    display: block;
-    width: 100%;
     height: 10px;
 }
 .separator20{
-    display: block;
-    width: 100%;
     height: 20px;
 }
+.separator25{
+    height: 25px;
+}
 .separator30{
-    display: block;
-    width: 100%;
     height: 30px;
 }
 .separator35{
-    display: block;
-    width: 100%;
     height: 35px;
 }
 .separator40{
-    display: block;
-    width: 100%;
     height: 40px;
 }
 .separator50{
-    display: block;
-    width: 100%;
     height: 50px;
 }
+.separator75{
+    height: 75px;
+}
 .separator100{
-    display: block;
-    width: 100%;
     height: 100px;
 }
 .vTop{
@@ -172,4 +167,7 @@ body{
     top:50%;
     left: 50%;
     transform:translate(-50%,-50%);
+}
+.nomargintop{
+    margin-top: 0;
 }

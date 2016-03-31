@@ -105,13 +105,13 @@ input[type="file"] {
     line-height: 42px;
     &:before {
         content: "";
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 25px;
         display: inline-block;
         vertical-align: middle;
-        margin: -5px 10px 0 -25px;
+        margin: -5px 15px 0 -25px;
         border-radius: 50%;
-        border: 3px solid transparent;
+        border: 7px solid transparent;
         box-shadow: 0px 0 0px 1px #ccc, 0 0 0 7px transparent inset;
         transition: box-shadow .15s linear;
     }
@@ -143,12 +143,12 @@ input[type="radio"]:checked:hover + label:before {
     width: auto;
     &:before {
         content: "";
-        width: 18px;
-        height: 18px;
+        width: 25px;
+        height: 25px;
         display: inline-block;
         vertical-align: middle;
-        margin: -5px 10px 0 -25px;
-        border: 2px solid #ccc;
+        margin: -5px 15px 0 -25px;
+        border: 7px solid #ccc;
         transition: border-color .15s linear;
     }
     &:hover {

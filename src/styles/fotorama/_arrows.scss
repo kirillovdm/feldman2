@@ -1,0 +1,294 @@
+.fotorama__arr,
+.fotorama__fullscreen-icon,
+.fotorama__video-play,
+.fotorama__video-close {
+  position: absolute;
+  z-index: 11;
+  cursor: pointer;
+  @extend %no-tap;
+  @extend %no-select;
+
+  .fotorama__wrap--css3 & {
+    @extend %initial-translate;
+  }
+}
+
+//.fotorama__arr {
+//  width: $arrSize * 1.5;
+//  height: 100%;
+//  top: 0;
+//  bottom: 0;
+//}
+
+.fotorama__arr {
+  //@extend %gpu;
+  position: absolute;
+  width: $arrSize;
+  height: $arrSize;
+  //left: 50%;
+  top: 50%;
+  //margin-left: -($arrSize / 2);
+  margin-top: -($arrSize / 2);
+  @extend %sprite;
+
+    position: absolute;
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid $gold;
+    line-height:56px;
+    top: 50%;
+    margin-top:-28px;
+    background-color:rgba(255,255,255,1);
+    background-color:#fff\9;/*IE8 hack*/
+    backface-visibility:hidden;
+    color:$gold;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    z-index:10;
+    font-family:sans-serif;   
+    font-size:13px;
+    cursor:pointer;
+    -webkit-transition:all 0.7s;
+    transition:all 0.7s;
+    font-size: 13px;
+    letter-spacing: 0.93px;
+    text-transform: uppercase;
+    background-image: none;
+}
+
+.fotorama__arr--prev {
+  left: 15px;
+  //.fotorama__arr__arr {
+    background-position: 0 0;
+  //}
+}
+
+.fotorama__arr--next {
+  right: 15px;
+  //.fotorama__arr__arr {
+    background-position: (-$arrSize) 0;
+  //}
+}
+
+
+.fotorama__arr--prev:before, 
+.fotorama__arr--next:before{
+    position: absolute;
+    top: 15px;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-left: 1px solid $gold;
+    border-top: 1px solid $gold;
+}
+.fotorama__arr--prev:before{
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    backface-visibility:hidden;
+    left:20px;
+} 
+.fotorama__arr--next:before{
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    backface-visibility:hidden;
+    right:20px;
+}
+
+.fotorama__arr--disabled {
+  pointer-events: none;
+  cursor: default;
+  *display: none;
+  opacity: .1;
+}
+
+.fotorama__fullscreen-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  top: 15px;
+  right: 15px;
+  border: 1px solid $gold;
+  background-image: url(../images/fullscreen.svg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 20;
+}
+
+.fotorama__fullscreen-icon,
+.fotorama__arr {
+  &:focus {
+    border-radius: 50%;
+    @extend %focus;
+    @extend %focus-overlay;
+  }
+}
+
+.fotorama--fullscreen {
+  .fotorama__fullscreen-icon {
+    background-image: url(../images/fullscreen.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    right: 50px;
+  }
+  .fotorama__arr--prev::after,
+  .fotorama__arr--next::after{
+    display: none;
+  }
+
+  .fotorama__arr--prev{
+    left: 50px; 
+    width: 50px;
+    background-color: #fff;
+    &:before{
+      left: 20px;
+    }
+  }
+  .fotorama__arr--next{
+    right: 50px;
+    width: 50px;
+    background-color: #fff;
+    &:before{
+      right: 20px;
+    }
+  }
+
+}
+
+.fotorama__video-play {
+  width: $arrSize * 3;
+  height: $arrSize * 3;
+  left: 50%;
+  top: 50%;
+  margin-left: -($arrSize * 3 / 2);
+  margin-top: -($arrSize * 3 / 2);
+  @extend %sprite;
+  background-position: 0 (-$arrSize*2);
+  opacity: 0;
+
+  .fotorama__wrap--css2 &,
+  .fotorama__wrap--video .fotorama__stage & {
+    display: none;
+  }
+
+  .fotorama__loaded &,
+  .fotorama__error &,
+  .fotorama__nav__frame & {
+    opacity: 1;
+    display: block;
+  }
+
+  .fotorama__nav__frame & {
+    width: $arrSize;
+    height: $arrSize;
+    margin-left: -($arrSize / 2);
+    margin-top: -($arrSize / 2);
+    background-position: (-$arrSize*2) (-$arrSize);
+  }
+}
+
+.fotorama__video-close {
+  width: $arrSize;
+  height: $arrSize;
+  top: 0;
+  right: 0;
+  @extend %sprite;
+  background-position: (-$arrSize*2) 0;
+  z-index: 20;
+  opacity: 0;
+
+  .fotorama__wrap--css2 & {
+    display: none;
+  }
+
+  .fotorama__wrap--css3 & {
+    transform: translate3d($arrSize, -$arrSize, 0);
+  }
+
+  .fotorama__wrap--video & {
+    display: block;
+    opacity: 1;
+  }
+
+  .fotorama__wrap--css3.fotorama__wrap--video & {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows {
+  .fotorama__arr,
+  .fotorama__fullscreen-icon {
+    opacity: 0;
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+.fotorama__wrap--video {
+  .fotorama__arr,
+  .fotorama__fullscreen-icon {
+    opacity: 0 !important;
+  }
+}
+
+.fotorama__wrap--css2 {
+  &.fotorama__wrap--no-controls.fotorama__wrap--toggle-arrows {
+    .fotorama__arr,
+    .fotorama__fullscreen-icon {
+      display: none;
+      &:focus {
+        display: block;
+      }
+    }
+  }
+  &.fotorama__wrap--video {
+    .fotorama__arr,
+    .fotorama__fullscreen-icon {
+      display: none !important;
+    }
+  }
+}
+
+.fotorama__wrap--css3 {
+  &.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows {
+    .fotorama__fullscreen-icon:not(:focus) {
+      transform: translate3d($arrSize, -$arrSize, 0);
+    }
+    .fotorama__arr--prev:not(:focus) {
+      transform: translate3d(-$arrSize * 1.5, 0, 0);
+    }
+    .fotorama__arr--next:not(:focus) {
+      transform: translate3d($arrSize * 1.5, 0, 0);
+    }
+  }
+  &.fotorama__wrap--video {
+    .fotorama__fullscreen-icon {
+      transform: translate3d($arrSize, -$arrSize, 0) !important;
+    }
+    .fotorama__arr--prev {
+      transform: translate3d(-$arrSize * 1.5, 0, 0) !important;
+    }
+    .fotorama__arr--next {
+      transform: translate3d($arrSize * 1.5, 0, 0) !important;
+    }
+  }
+}
+
+.fotorama__wrap--css3 {
+  .fotorama__arr:not(:focus),
+  .fotorama__fullscreen-icon:not(:focus),
+  .fotorama__video-play:not(:focus),
+  .fotorama__video-close:not(:focus) {
+    transition-property: transform, opacity;
+    transition-duration: $time;
+  }
+}
+

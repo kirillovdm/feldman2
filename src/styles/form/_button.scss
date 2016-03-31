@@ -94,7 +94,7 @@
     height: 50px;
     text-transform: uppercase;
     text-align: center;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,1);
     color:#000;
     margin: 30px auto;
     cursor: pointer;
@@ -141,11 +141,19 @@
             transition:all .1s linear;
         }
     &:hover{
-        color:#000;
+        color:#bd911f;
         background-color: rgba(255,255,255,1);
         .t{width: 100%;transition:all .2s linear;}
         .r{height: 100%;transition:all .1s .2s linear;}
         .b{width: 100%;transition:all .2s .3s linear;}
         .l{height: 100%;transition:all .1s .5s linear;}
     }
+    &:active{
+        background-color: rgba(255,255,255,.9);
+    }
+}
+
+.view-works{
+    margin: 0 auto 130px;
+    display: block;
 }

@@ -37,7 +37,11 @@ $layout-footer-sticky: false !default;
         clear: both;
         position: relative;
         border-top: 1px solid #000;
-        padding-top: 40px;
+        padding-top: 50px;
+        margin-top: 120px;
+        .main-title{
+            margin-bottom: 45px;
+        }
     }
 }
 
@@ -69,7 +73,7 @@ $layout-footer-sticky: false !default;
                     display: block;
                     position: absolute;
                     content: "";
-                    bottom: -5px;
+                    bottom: -2px;
                     right: 50%;
                     width: 0;
                     height: 1px;
@@ -80,7 +84,7 @@ $layout-footer-sticky: false !default;
                     display: block;
                     position: absolute;
                     content: "";
-                    bottom: -5px;
+                    bottom: -2px;
                     left: 50%;
                     width: 0;
                     height: 1px;
@@ -102,7 +106,7 @@ $layout-footer-sticky: false !default;
 }
 .social-links-block{
     text-align: center;
-    margin: 10px 0 50px;
+    margin: 27px 0 53px;
     a.social-item {
         margin: 0 40px;
         font-family: Heuristica;

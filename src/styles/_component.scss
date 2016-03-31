@@ -87,7 +87,7 @@
 		// width: 50%;
 		margin-left:auto;
 		margin-right: auto;
-    margin-top: 25vh;
+    margin-top: 22vh;
 	  // margin-top: 25%;
     color:#fff;
     span{
@@ -200,21 +200,9 @@
 
 .collapse-item{
 	margin-bottom: 10px;
+  margin-top: -15px;
 	& > a{
 	  position: relative;
-	}
-	a:hover{
-		h3{
-		  display: inline-block;
-		  color:#333;
-		  border-bottom: 1px dotted #333;
-		  padding: 0;
-		  margin: 0;
-		  transition: all .15s linear;
-		}
-		.icon-collapse-arrow{
-		  border-top-color: #333;
-		}
 	}
 }
 
@@ -223,28 +211,16 @@
 	  display: block;
 	  position: relative;
 	}
-	h3{
-	  display: inline-block;
-	  color:#000;
-	  border-bottom: 1px dotted #000;
-	  padding: 0;
-	  margin: 0;
-	  transition: all .15s linear;
-	}
 	.collapse {
 	}
 	.collapsed{
-	  h3{
-	    color:#000;
-	    border-bottom-color: #000;
-	  }
 	}
 }
 
 .well {
     p {
     margin: 0;
-    padding: 15px 0 10px;
+    padding: 0;
   }
 }
 .icon-collapse-arrow{

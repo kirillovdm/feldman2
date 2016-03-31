@@ -61,7 +61,7 @@ $(document).on('slide.bs.carousel','.carousel-top', function(event) {
     //Make something this HEADER after certain("sDistanse") scroll
     function headerAfterScroll(){
             var sElement = $('.bottom-header'),
-                sDistace = $('.top-header').height() + 40,
+                sDistace = $('.top-header').height() + 50,
                 sFromTop = $(window).scrollTop();
 
             if(sFromTop > sDistace) {
@@ -87,15 +87,26 @@ $(document).on('slide.bs.carousel','.carousel-top', function(event) {
 
 $(document).on("change", ".file-input", function(){
 
-        var $fileLabel = $(".file-label");
-            $filename = $(".file-input").val();
-            $fileLabelChildren = $(".file-label").children();
+    var $fileLabel = $(".file-label");
+    $filename = $(".file-input").val();
+    $fileLabelChildren = $(".file-label").children();
 
-        $fileLabel.addClass("filed");
-        $filename = $filename.replace(/^.*[\\\/]/, '');
+    $fileLabel.addClass("filed");
+    $filename = $filename.replace(/^.*[\\\/]/, '');
 
-        $fileLabel.empty();
-        $fileLabel.html($fileLabelChildren);
-        $fileLabel.append($filename);
+    $fileLabel.empty();
+    $fileLabel.html($fileLabelChildren);
+    $fileLabel.append($filename);
 
+});
+
+$(function(){
+    var pageArray = window.location.pathname.split( '/' );
+    var page = pageArray[pageArray.length-1];
+    $('.bottom-header li a').each(function(){
+        var $href = $(this).attr('href');
+        if ($href == page) {
+            $(this).parent().addClass('active');
+        }
     });
+});

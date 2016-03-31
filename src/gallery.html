@@ -9,42 +9,13 @@
         <div class="layout-content">
             <div class="container">
                 <a href="collection-list.html" class="back-to-list">Вернутся к списку</a>
-                <div id='ninja-slider'>
-                    <div>
-                        <div class="slider-inner">
-                            <ul>
-                                <li><a class="ns-img" href="images/exp_001_001.jpg"></a></li>
-                                <li><a class="ns-img" href="images/exp_001_002.jpg"></a></li>
-                                <li><a class="ns-img" href="images/exp_001_001.jpg"></a></li>
-                                <li><a class="ns-img" href="images/exp_001_002.jpg"></a></li>
-                            </ul>
-                            <div class="fs-icon" title="Expand/Close"></div>
-                        </div>
-                        <div id="thumbnail-slider">
-                            <div class="inner">
-                                <ul>
-                                    <li>
-                                        <a class="thumb" href="images/exp_min_001_001.jpg"></a>
-                                        <span>0</span>
-                                    </li>
-                                    <li>
-                                        <a class="thumb" href="images/exp_min_001_002.jpg"></a>
-                                        <span>1</span>
-                                    </li>
-                                    <li>
-                                        <a class="thumb" href="images/exp_min_001_001.jpg"></a>
-                                        <span>0</span>
-                                    </li>
-                                    <li>
-                                        <a class="thumb" href="images/exp_min_001_002.jpg"></a>
-                                        <span>1</span>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <a href="" class="prev-project">Предыдущий<br>экспонат</a>
+                <a href="" class="next-project">Следующий<br>экспонат</a>
+                <div class="fotorama" data-allowfullscreen="true" data-nav="thumbs">
+                    <img src="images/exp_001_001.jpg">
+                    <img src="images/exp_001_002.jpg">
                 </div>
+
                 <div class="grey-line"></div>
                 <div class="description-block">
                     <h5>Старики («Праздники»)</h5>
@@ -72,16 +43,16 @@
                                     <td>Бумага</td>
                                 </tr>
                                 <tr>
-                                    <td>Описание:</td>
-                                    <td>описание:</td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td>Поделится:</td>
                                     <td>
-                                        <a class="exp-social-link" href=""></a>
-                                        <a class="exp-social-link" href=""></a>
-                                        <a class="exp-social-link" href=""></a>
-                                        <a class="exp-social-link" href=""></a>
+                                        <a class="social-link" href=""></a>
+                                        <a class="social-link" href=""></a>
+                                        <a class="social-link" href=""></a>
+                                        <a class="social-link" href=""></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -91,6 +62,59 @@
                         <p>В рамках Feldman Family Museum объединены памятники истории и культуры Запада и Востока, которые Александр Фельдман собирал в течение почти двух десятилетий. Коллекция современного искусства состоит из работ живописи и графики украинских молодых и титулованных авторов.</p>
                     </div>
                 </div>
+                <div class="main-title wow" data-wow-offset="100"><span>ДРУГИЕ РАБОТЫ ЭТОГО АВТОРА</span></div>
+
+                <div class="more-works-block">
+                    <div class="ccat">
+                        <div class="ccat-column">
+                            <a href="gallery.html" class="coll-card" data-ccat-order="1">
+                                <img src="images/gallery_001.jpg" alt="gallery_001" class="coll-card-img">
+                                <div class="card-info">
+                                    <div class="card-title">Натюрморт на подоконнике</div>
+                                    <div class="post-descr">Франция (École de Paris)</div>
+                                    <div class="year">1930 гг.</div>
+                                    <div class="author">Альтман Александр</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ccat-column">
+                            <a href="" class="coll-card" data-ccat-order="2">
+                                <img src="images/gallery_002.jpg" alt="gallery_002" class="coll-card-img">
+                                <div class="card-info">
+                                    <div class="card-title">Натюрморт на подоконнике</div>
+                                    <div class="post-descr">Франция (École de Paris)</div>
+                                    <div class="year">1930 гг.</div>
+                                    <div class="author">Альтман Александр</div>    
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ccat-column">
+                            <a href="" class="coll-card" data-ccat-order="3">
+                                <img src="images/gallery_003.jpg" alt="gallery_003" class="coll-card-img">
+                                <div class="card-info">
+                                    <div class="card-title">Натюрморт на подоконнике</div>
+                                    <div class="post-descr">Франция (École de Paris)</div>
+                                    <div class="year">1930 гг.</div>
+                                    <div class="author">Альтман Александр</div>    
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ccat-column">
+                            <a href="" class="coll-card" data-ccat-order="4">
+                                <img src="images/gallery_006.jpg" alt="gallery_006" class="coll-card-img">
+                                <div class="card-info">
+                                    <div class="card-title">Натюрморт на подоконнике</div>
+                                    <div class="post-descr">Франция (École de Paris)</div>
+                                    <div class="year">1930 гг.</div>
+                                    <div class="author">Альтман Александр</div>    
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn btn-transparent view-works"><span>ПОСМОТРЕТЬ ВСЕ РАБОТЫ АВТОРА</span></div>
+
         <!-- partial:include('layout/footer.partial.html') -->
             </div>
         </div>

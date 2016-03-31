@@ -12,3 +12,26 @@
 .layout-aside + .layout-content {
     margin-left: $layout-aside-width + $layout-aside-margin-right;
 }
+
+.container{
+	position: relative;
+}
+
+
+.half-cont{
+	display: block;
+	@extend %clearfix;
+	.left-block{
+		width: 50%;
+		float: left;
+		padding-right: 30px;
+	}
+	.right-block{
+		width: 50%;
+		float: right;
+		padding-left: 30px;
+	}
+	table.exp-info tr td:first-of-type{
+		padding-right: 30px;
+	}
+}
