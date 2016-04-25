@@ -35,6 +35,8 @@ $layout-header-fixed: false !default;
     .logo-block{
         text-align: center;
         display: block;
+        position: relative;
+        z-index: 99999;
         img{
             display: inline-block;
         }
